@@ -2,30 +2,47 @@ import React, {useState, useEffect} from 'react'
 import { motion } from 'framer-motion'
 import './About.scss'
 import { images } from '../../constants'
-
+import { AppWrapper } from '../../wrapper'
+// import { urlFor } from '../../client'
+// import { client } from '../../client'
 const abouts = [
   {
-    title: 'Web Development', description: 'I am a good Web Developer', imageUrl: images.about01,
+    title: 'Frontend Development', description: 'I am a good Frontend Developer with a passion for building beautiful and functional web applications', imageUrl: images.about01,
+  
+  },
+
+  
+
+  { 
+    title: 'Backend Development', description: 'Im a good backend developer for mobile apps. and i develop neat and functional APIs using javaScript', imageUrl: images.about03,
+  
+  },
+
+  { 
+    title: 'MERN Stack', description: 'I am a fullstack MERN developer', imageUrl: images.about04,
   
   },
 
   {
-    title: 'Frontend Development', description: 'I am a good Web Developer', imageUrl: images.about02,
-  
-  },
-
-  { 
-    title: 'Backend Development', description: 'I am a good Web Developer', imageUrl: images.about03,
-  
-  },
-
-  { 
-    title: 'MERN Stack', description: 'I am a good Web Developer', imageUrl: images.about04,
+    title: 'Mobile App Developer', description: 'I develop user friendly mobile apps with ReactNative for both android and IOS mobile device', imageUrl: images.about02,
   
   },
 ]
 
+
+
 const About = () => {
+
+  // const [abouts, setAbouts] = useState([])
+
+  // useEffect(() => {
+  //   const query = '*[_type == "abouts"]';
+  //   client.fetch(query).then((data) => setAbouts(data))
+
+
+  
+  // }, [])
+
   return (
     <div>
       <h2 className="head-text">
@@ -69,4 +86,4 @@ const About = () => {
   )
 }
 
-export default About
+export default AppWrapper( About, 'about' )

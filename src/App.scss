@@ -100,8 +100,13 @@
   .app__social {
     display: flex;
     justify-content: flex-end;
-    align-items: center;
+    position: absolute;
+    // align-items: flex-end;
+    margin-top: 60vh;
+    // align-items:;
     flex-direction: column;
+    // height: 300px;
+    // top: 1000vh;
   
     padding: 1rem;
   
@@ -151,7 +156,7 @@
   .app__navigation {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     flex-direction: column;
   
     padding: 1rem;
@@ -177,9 +182,12 @@
   }
   
   @media screen and (max-width: 500px) {
-    .app__navigation,
-    .app__social {
+    .app__navigation
+     {
       display: none;
+    }
+    .app__social{
+      display: flex;
     }
   
     .copyright {
