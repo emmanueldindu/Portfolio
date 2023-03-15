@@ -1,11 +1,12 @@
 import React, {useState, useEffect} from 'react'
 import './Work.scss'
-import apple from '../../assets/apple.PNG'
+// import apple from '../../assets/apple.PNG'
 import { motion } from 'framer-motion'
+import { AppWrapper, MotionWrap } from '../../wrapper'
 import {AiFillEye, AiFillGithub} from 'react-icons/ai'
-import { client } from '../../client'
+import { client, urlFor } from '../../client'
 const Work = () => {
-const [activeFilter, setActiveFilter] = useState('all')
+const [activeFilter, setActiveFilter] = useState('All')
   const [filterWork, setFilterWork] = useState([]);
   
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 })
@@ -13,11 +14,12 @@ const [works, setWorks] = useState([])
  
   
   useEffect(() => {
-    const query = '*[_type == "works]';
+    const query = '*[_type == "works"]';
 
     client.fetch(query).then((data) => {
       setWorks(data);
       setFilterWork(data)
+      console.log(query)
     })
   }, [])
   
@@ -118,4 +120,9 @@ const [works, setWorks] = useState([])
   )
 }
 
-export default Work
+
+export default AppWrapper(
+  MotionWrap(Work, 'app__works'),
+  'work',
+  'app__primarybg',
+);

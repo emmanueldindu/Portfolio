@@ -20,7 +20,7 @@ const Navbar = () => {
 
       </div>
       <ul className='app__navbar-links'>
-        {['home', 'about', 'contact', 'work', 'skils', ].map((item) => (
+        {['home', 'about', 'work', 'skills','contact',  ].map((item) => (
           <li className='app__flex p-text' key={`link-${item}`}>
             <div />
             <a href={`#${item}`}>{item}</a>
@@ -41,7 +41,7 @@ const Navbar = () => {
 
             <ul>
 
-              {['home', 'about', 'contact', 'work', 'skils', 'contact'].map((item) => (
+              {['home', 'about',  'work', 'skils', 'contact'].map((item) => (
               
              
               <li key={item}>

@@ -6,10 +6,21 @@ const SocialMedia = () => (
 
       <div className='app__social'>
           <div className="">
+             
+            
+            <a href="https://twitter.com/bettertimes_web">
+                
+
               <BsTwitter />
+               </a>
+              
           </div>
-          <div>
+        <div>
+            <a href="https://www.linkedin.com/in/emmadindu/">
+
+
               <BsLinkedin />
+            </a>
           </div>
           <div>
               <BsInstagram />
@@ -19,3 +30,4 @@ const SocialMedia = () => (
 )
 
 export default SocialMedia
+ 
